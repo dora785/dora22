@@ -48,7 +48,7 @@ echo "$(tput setaf 6)Done!"
 clear
 echo "$(tput setaf 6)Merging video+audio......"
 #Merging
-ffmpeg -v quiet -stats -i dec.mp4 -i dec.m4a -c copy /var/www/html/"$fname"
+ffmpeg -v quiet -stats -i dec.mp4 -i dec.m4a -c copy /root/"$fname"
 clear
 echo "$(tput setaf 6)D O N E....!"
 echo "$(tput setaf 6)Boleh akses file anda di directory /var/www/html/"$fname""

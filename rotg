@@ -39,7 +39,7 @@ read -r fname
 clear
 #Use yt-dlp to download DRM-protected video and audio
 echo "$(tput setaf 6)Downloading video+audio......"
-yt-dlp -q --progress --no-warnings --allow-u -f "$vidID"+"$audID" "$mpdlink" -o d -N 20
+yt-dlp -q --progress --no-warnings --allow-u -f "$vidID"+"$audID" "$mpdlink" -o d -N 18
 clear
 #Decrypting
 echo "$(tput setaf 6)Decrypting video+audio......"
@@ -51,7 +51,7 @@ echo "$(tput setaf 6)Merging video+audio......"
 ffmpeg -v quiet -stats -i dec.mp4 -i dec.m4a -c copy /root/"$fname"
 clear
 echo "$(tput setaf 6)D O N E....!"
-echo "$(tput setaf 6)Boleh akses file anda di directory /var/www/html/"$fname""
+echo "$(tput setaf 6)Boleh akses file anda di directory /root/"$fname""
 ip=$(hostname -I | awk '{print $1}')
 echo "$(tput setaf 6)atau akses melalui IP VPS anda di:"
 echo "$(tput setaf 6)http://"$ip"/"$fname""
